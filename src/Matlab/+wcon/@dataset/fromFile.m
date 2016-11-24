@@ -42,10 +42,9 @@ if strcmp(ext,'.zip')
     tic;
     tokens = json.stringToTokens(temp_char_data);
     toc;
-    keyboard
+else
+    tokens = json.fileToTokens(file_path);
 end
-
-tokens = json.fileToTokens(file_path);
 
 %Populate the file from the tokens
 %---------------------------------

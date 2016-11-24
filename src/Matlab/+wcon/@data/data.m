@@ -34,15 +34,15 @@ classdef data < json.dict
         function plotWorm(obj,varargin)
             
            in.step_size = 1;
-           in = sl.in.processVarargin(in,varargin);
+           in = wcon.sl.in.processVarargin(in,varargin);
            
            %TODO: We could build in id support for object selection
            if length(obj) > 1
                error('Method only supports a singular object')
            end
            props = obj.props;
-           x = props('x');
-           y = props('y');
+           x = props.x;
+           y = props.y;
            
            %TODO: Need to get standard representation ...
            %May be:
